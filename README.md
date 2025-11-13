@@ -147,7 +147,7 @@ NaviHive 是一个精美的网站导航管理系统，帮助你整理和管理�
    - 在数据库管理界面，点击"控制台"选项卡进入SQL编辑器
    - 在SQL编辑器中，逐个复制并粘贴以下SQL命令：
 
-   ```sql```
+   
    -- 创建分组表
   ```
     CREATE TABLE IF NOT EXISTS groups (
@@ -179,11 +179,13 @@ NaviHive 是一个精美的网站导航管理系统，帮助你整理和管理�
        value TEXT NOT NULL,
        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );```
+   );
+```
 
    -- 设置初始化标志
-  ``` INSERT INTO configs (key, value) VALUES ('DB_INITIALIZED', 'true');
-   ```
+  ```
+  INSERT INTO configs (key, value) VALUES ('DB_INITIALIZED', 'true');
+  ```
 
    - 点击"运行"按钮执行SQL命令：
 
