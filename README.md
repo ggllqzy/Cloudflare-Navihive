@@ -147,7 +147,7 @@ NaviHive 是一个精美的网站导航管理系统，帮助你整理和管理�
    - 在数据库管理界面，点击"控制台"选项卡进入SQL编辑器
    - 在SQL编辑器中，`逐个复制`并粘贴以下SQL命令：
 
-   ---SQL
+   ```SQL
    -- 创建分组表
 CREATE TABLE IF NOT EXISTS groups (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
