@@ -147,18 +147,19 @@ NaviHive 是一个精美的网站导航管理系统，帮助你整理和管理�
    - 在数据库管理界面，点击"控制台"选项卡进入SQL编辑器
    - 在SQL编辑器中，逐个复制并粘贴以下SQL命令：
 
-   ```sql
+   ```sql```
    -- 创建分组表
-   CREATE TABLE IF NOT EXISTS groups (
+  ```
+    CREATE TABLE IF NOT EXISTS groups (
        id INTEGER PRIMARY KEY AUTOINCREMENT, 
        name TEXT NOT NULL, 
        order_num INTEGER NOT NULL, 
        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    );
-
+```
    -- 创建站点表
-   CREATE TABLE IF NOT EXISTS sites (
+  ``` CREATE TABLE IF NOT EXISTS sites (
        id INTEGER PRIMARY KEY AUTOINCREMENT, 
        group_id INTEGER NOT NULL, 
        name TEXT NOT NULL, 
@@ -171,17 +172,17 @@ NaviHive 是一个精美的网站导航管理系统，帮助你整理和管理�
        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
        FOREIGN KEY (group_id) REFERENCES groups(id) ON DELETE CASCADE
    );
-
+```
    -- 创建配置表
-   CREATE TABLE IF NOT EXISTS configs (
+ ```  CREATE TABLE IF NOT EXISTS configs (
        key TEXT PRIMARY KEY,
        value TEXT NOT NULL,
        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
+   );```
 
    -- 设置初始化标志
-   INSERT INTO configs (key, value) VALUES ('DB_INITIALIZED', 'true');
+  ``` INSERT INTO configs (key, value) VALUES ('DB_INITIALIZED', 'true');
    ```
 
    - 点击"运行"按钮执行SQL命令：
